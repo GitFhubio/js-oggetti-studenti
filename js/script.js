@@ -5,7 +5,7 @@
 
 
 // 1)
-
+console.log('stampo key e key values del singolo studente');
 var studente={
 'nome':'Fabio',
 'cognome':'Petrone',
@@ -13,11 +13,10 @@ var studente={
 }
 
 for (var key in studente) {
-   console.log(studente[key])
+   console.log(key+':'+studente[key]);
 }
-
 // 2)
-
+console.log('stampo solo nomi e cognomi degli studenti della classe');
 var studenti=[{
 'nome':'Fabio',
 'cognome':'Petrone',
@@ -35,7 +34,7 @@ var studenti=[{
 for (var i = 0; i < studenti.length; i++) {
  for(var key in studenti[i]){
   if (key !='anni'){
-console.log(studenti[i][key]);
+console.log([key]+':'+studenti[i][key]);
   }
  }
 }
