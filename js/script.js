@@ -46,7 +46,7 @@ console.log([key]+':'+studenti[i][key]);
 // console.log(studenti[i].cognome);
 //   }
 
-
+// 3)
 
 var nuovoStudente={};
 // nuovoStudente.nome=newWord('nome');
@@ -55,13 +55,22 @@ var nuovoStudente={};
 
 // oppure
 
-var nuovoStudente = {'nome': newWord('nome'),
+var nuovoStudente = {
+'nome': newWord('nome'),
 'cognome': newWord('cognome'),
 'anni':newAge(),
 }
 
 studenti.push(nuovoStudente);
-console.log(studenti);
+
+// console.log(studenti);
+console.log('Dopo l\'ultimo ingresso la classe è formata da questi ragazzi')
+for (var i = 0; i < studenti.length; i++) {
+  console.log('ragazzo #'+(i+1));
+ for(var key in studenti[i]){
+console.log([key]+':'+studenti[i][key]);
+ }
+}
 
 // FUNZIONI
 
