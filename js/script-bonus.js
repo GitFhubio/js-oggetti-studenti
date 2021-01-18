@@ -68,7 +68,7 @@ studenti.push(nuovoStudente);
 
 var lista=document.getElementById('lista');
 var classe=document.getElementById('classe');
-var html='<h1>Studenti della classe</h1>'
+var html='<h1 style="color:red";>Studenti della classe</h1>'
 for (var i = 0; i < studenti.length; i++) {
  html+='<h2>Ragazzo'+(i+1)+'</h2>';
  for(var key in studenti[i]){
