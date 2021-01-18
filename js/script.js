@@ -39,10 +39,27 @@ console.log([key]+':'+studenti[i][key]);
  }
 }
 
+// oppure
+// for (var i = 0; i < studenti.length; i++) {
+//
+// console.log(studenti[i].nome);
+// console.log(studenti[i].cognome);
+//   }
+
+
+
 var nuovoStudente={};
-nuovoStudente.nome=newWord('nome');
-nuovoStudente.cognome=newWord('cognome');
-nuovoStudente.anni=newAge();
+// nuovoStudente.nome=newWord('nome');
+// nuovoStudente.cognome=newWord('cognome');
+// nuovoStudente.anni=newAge();
+
+// oppure
+
+var nuovoStudente = {'nome': newWord('nome'),
+'cognome': newWord('cognome'),
+'anni':newAge(),
+}
+
 studenti.push(nuovoStudente);
 console.log(studenti);
 
@@ -63,10 +80,12 @@ return output;
 }
 function newAge(){
 var anni;
-while(anni<12 || anni>50 || isNaN(anni)){
+var anniMax=50;
+var anniMin=12;
+while(anni<anniMin || anni>anniMax || isNaN(anni)){
 anni=parseInt(prompt('Dimmi gli anni del nuovo studente'));
-if(anni<12 || anni>50)
-{alert('Devi inserire un\'età tra 12 e 50');
+if(anni<anniMax || anni>anniMax)
+{alert('Devi inserire un\'età tra '+anniMin+' e '+anniMax);
 }
 if(isNaN(anni))
 {alert('Devi inserire un numero')
