@@ -40,6 +40,7 @@ console.log(studenti[i][key]);
  }
 }
 
+var nuovoStudente={};
 var nuovoNome='';
 var nuovoCognome='';
 var nuoviAnni=0;
@@ -73,15 +74,10 @@ if(isNaN(nuoviAnni))
 }
 }
 
-var nuovoStudente={
-  'nome':nuovoNome,
-    'cognome':nuovoCognome,
-      'anni':nuoviAnni,
-}
-
+nuovoStudente.nome=nuovoNome;
+nuovoStudente.cognome=nuovoCognome;
+nuovoStudente.anni=nuoviAnni;
 studenti.push(nuovoStudente);
 console.log(studenti);
 
-
-// var nuovostudente={};
 // oppure creavo var nuovostudente vuoto,e definivo le proprietà col punto= funzioni di verifica che ritorna nome cognome e anni
