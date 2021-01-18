@@ -76,6 +76,15 @@ for (var i = 0; i < studenti.length; i++) {
  }
 }
 classe.innerHTML+=html;
+
+var html2='';
+lista.prepend('Lista dei ragazzi della classe')
+for (var i = 0; i < studenti.length; i++) {
+  for(var key in studenti[i]){
+  html2+='<li><strong>'+[key]+'</strong>:'+studenti[i][key]+'</li>';
+  }
+}
+lista.innerHTML+=html2;
 // FUNZIONI
 
 function newWord(word){
