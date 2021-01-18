@@ -87,7 +87,7 @@ for (var i = 0; i < studenti.length; i++) {
 }
 lista.innerHTML+=html2;
 
-$('li:nth-child(4n+2)').css('color','red');
+$('li:nth-child(4n+1)').css('color','red');
 // FUNZIONI
 
 function newWord(word){
