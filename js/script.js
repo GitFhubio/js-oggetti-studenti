@@ -84,7 +84,7 @@ var anniMax=50;
 var anniMin=12;
 while(anni<anniMin || anni>anniMax || isNaN(anni)){
 anni=parseInt(prompt('Dimmi gli anni del nuovo studente'));
-if(anni<anniMax || anni>anniMax)
+if(anni<anniMin || anni>anniMax)
 {alert('Devi inserire un\'età tra '+anniMin+' e '+anniMax);
 }
 if(isNaN(anni))
