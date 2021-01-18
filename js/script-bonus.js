@@ -77,14 +77,17 @@ for (var i = 0; i < studenti.length; i++) {
 }
 classe.innerHTML+=html;
 
-var html2='';
-lista.prepend('Lista dei ragazzi della classe')
+lista.before('Lista dei ragazzi della classe -->');
+html2='';
 for (var i = 0; i < studenti.length; i++) {
+  html2+='<li>Ragazzo'+(i+1)+'</li>';
   for(var key in studenti[i]){
   html2+='<li><strong>'+[key]+'</strong>:'+studenti[i][key]+'</li>';
   }
 }
 lista.innerHTML+=html2;
+
+$('li:nth-child(4n+2)').css('color','red');
 // FUNZIONI
 
 function newWord(word){
