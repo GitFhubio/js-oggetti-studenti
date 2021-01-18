@@ -39,12 +39,40 @@ console.log(studenti[i][key]);
   }
  }
 }
-// 3)
-// o con le funzioni per le verifiche
 
-var nuovoNome=prompt('Dimmi il nome del nuovo studente');
-var nuovoCognome=prompt('Dimmi il cognome del nuovo studente');
-var nuoviAnni=parseInt(prompt('Dimmi gli anni del nuovo studente'));
+var nuovoNome='';
+var nuovoCognome='';
+var nuoviAnni=0;
+while(nuovoNome.length<3 || !isNaN(nuovoNome)){
+nuovoNome=prompt('Dimmi il nome del nuovo studente');
+if(nuovoNome.length<3)
+{alert('Devi inserire un nome di almeno 3 lettere');
+}
+if(!isNaN(nuovoNome))
+{alert('non puoi inserire un numero')
+}
+}
+
+while(nuovoCognome.length<3 || !isNaN(nuovoCognome)){
+nuovoCognome=prompt('Dimmi il cognome del nuovo studente');
+if(nuovoCognome.length<3)
+{alert('Devi inserire un cognome di almeno 3 lettere');
+}
+if(!isNaN(nuovoCognome))
+{alert('non puoi inserire un numero')
+}
+}
+
+while(nuoviAnni<12 || nuoviAnni>50 || isNaN(nuoviAnni)){
+nuoviAnni=parseInt(prompt('Dimmi gli anni del nuovo studente'));
+if(nuoviAnni<12 || nuoviAnni>50)
+{alert('Devi inserire un\'età tra 12 e 50');
+}
+if(isNaN(nuoviAnni))
+{alert('Devi inserire un numero')
+}
+}
+
 var nuovoStudente={
   'nome':nuovoNome,
     'cognome':nuovoCognome,
@@ -53,6 +81,7 @@ var nuovoStudente={
 
 studenti.push(nuovoStudente);
 console.log(studenti);
+
 
 // var nuovostudente={};
 // oppure creavo var nuovostudente vuoto,e definivo le proprietà col punto= funzioni di verifica che ritorna nome cognome e anni
